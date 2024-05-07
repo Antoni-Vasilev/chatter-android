@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="primary">#FF007EAF</color>
+    <color name="primary_9">#E5007EAF</color>
+    <color name="primary_8">#CC007EAF</color>
+    <color name="primary_7">#B2007EAF</color>
+    <color name="primary_6">#99007EAF</color>
+    <color name="primary_5">#7F007EAF</color>
+    <color name="primary_4">#66007EAF</color>
+    <color name="primary_3">#4C007EAF</color>
+    <color name="primary_2">#33007EAF</color>
+    <color name="primary_1">#19007EAF</color>
+</resources>
