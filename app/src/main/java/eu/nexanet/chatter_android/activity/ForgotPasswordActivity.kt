@@ -1,32 +1,40 @@
-package eu.nexanet.chatter_android
+package eu.nexanet.chatter_android.activity
 
-import android.annotation.SuppressLint
-import android.content.Intent
 import android.os.Bundle
+import android.widget.LinearLayout
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import eu.nexanet.chatter_android.R
 
+class ForgotPasswordActivity : AppCompatActivity() {
 
-@SuppressLint("CustomSplashScreen")
-class SplashActivity : AppCompatActivity() {
+    private lateinit var btnBack: LinearLayout
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash)
         enableEdgeToEdge()
+        setContentView(R.layout.activity_forgot_password)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        showLogin()
+        init()
+        setActions()
     }
 
-    private fun showLogin() {
-        val intent = Intent(this, LoginActivity::class.java)
-        startActivity(intent)
+    private fun init() {
+        btnBack = findViewById(R.id.btnBack)
+    }
+
+    private fun setActions() {
+        btnBack.setOnClickListener { btnBackOnClick() }
+    }
+
+    private fun btnBackOnClick() {
         finish()
     }
 }

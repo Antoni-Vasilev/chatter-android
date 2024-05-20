@@ -10,4 +10,7 @@
     <string name="full_name">Full name</string>
     <string name="welcome_to">Welcome to</string>
     <string name="back_to_login">Back to login</string>
+    <string name="forgot_password_text">Forgor password</string>
+    <string name="next">Next</string>
+    <string name="enter_your_email">Enter your email</string>
 </resources>

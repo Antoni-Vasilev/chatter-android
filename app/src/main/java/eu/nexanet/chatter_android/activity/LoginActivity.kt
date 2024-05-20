@@ -1,9 +1,8 @@
-package eu.nexanet.chatter_android
+package eu.nexanet.chatter_android.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -11,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.textfield.TextInputLayout
+import eu.nexanet.chatter_android.R
 import java.util.Date
 
 class LoginActivity : AppCompatActivity() {
@@ -47,10 +47,20 @@ class LoginActivity : AppCompatActivity() {
     }
 
     private fun setupActions() {
-        btnSignUp.setOnClickListener { btnSignUpAction(it) }
+        btnSignUp.setOnClickListener { btnSignUpAction() }
+        btnForgotPassword.setOnClickListener { btnForgotPasswordAction() }
     }
 
-    private fun btnSignUpAction(v: View) {
+    private fun btnForgotPasswordAction() {
+        showForgotPassword()
+    }
+
+    private fun showForgotPassword() {
+        val intent = Intent(this, ForgotPasswordActivity::class.java)
+        startActivity(intent)
+    }
+
+    private fun btnSignUpAction() {
         showSignUp()
     }
 
