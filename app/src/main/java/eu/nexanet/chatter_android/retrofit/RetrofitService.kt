@@ -7,7 +7,7 @@ class RetrofitService {
 
     companion object {
         private val retrofit: Retrofit = Retrofit.Builder()
-            .baseUrl("https://test-chatter.bg127.eu")
+            .baseUrl("https://test-chatter.bg127.eu/")
             .addConverterFactory(GsonConverterFactory.create())
             .build()
 

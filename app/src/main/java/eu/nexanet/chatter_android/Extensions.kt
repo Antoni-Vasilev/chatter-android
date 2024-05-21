@@ -1,5 +1,6 @@
 package eu.nexanet.chatter_android
 
+import com.google.android.material.textfield.TextInputLayout
 import java.security.MessageDigest
 
 fun String.toSHA256(): String {
@@ -16,4 +17,8 @@ fun String.toSHA256(): String {
             )
         }
     )
+}
+
+fun TextInputLayout.readField(): String {
+    return this.editText?.text.toString().trim()
 }

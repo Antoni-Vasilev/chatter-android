@@ -13,6 +13,7 @@ import com.google.gson.Gson
 import eu.nexanet.chatter_android.R
 import eu.nexanet.chatter_android.model.MessageResponse
 import eu.nexanet.chatter_android.model.UserRegisterRequest
+import eu.nexanet.chatter_android.readField
 import eu.nexanet.chatter_android.retrofit.RetrofitService
 import eu.nexanet.chatter_android.toSHA256
 import retrofit2.Call
@@ -59,9 +60,9 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun btnSignUpOnClick() {
-        val fullName = readField(fieldFullName)
-        val email = readField(fieldEmail)
-        val password = readField(fieldPassword).toSHA256()
+        val fullName = fieldFullName.readField()
+        val email = fieldEmail.readField()
+        val password = fieldPassword.readField().toSHA256()
 
         val data = UserRegisterRequest(fullName, email, password)
 
@@ -82,7 +83,11 @@ class SignUpActivity : AppCompatActivity() {
                             Toast.makeText(this@SignUpActivity, message.message, Toast.LENGTH_LONG)
                                 .show()
                         } else if (p1.code() >= 500) {
-                            Toast.makeText(this@SignUpActivity, "Server not available", Toast.LENGTH_LONG).show()
+                            Toast.makeText(
+                                this@SignUpActivity,
+                                "Server not available",
+                                Toast.LENGTH_LONG
+                            ).show()
                         }
                     }
                 }
@@ -91,9 +96,5 @@ class SignUpActivity : AppCompatActivity() {
                     Toast.makeText(this@SignUpActivity, p1.message, Toast.LENGTH_LONG).show()
                 }
             })
-    }
-
-    private fun readField(field: TextInputLayout): String {
-        return field.editText?.text.toString()
     }
 }

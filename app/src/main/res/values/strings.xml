@@ -13,4 +13,7 @@
     <string name="forgot_password_text">Forgor password</string>
     <string name="next">Next</string>
     <string name="enter_your_email">Enter your email</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="open_nav" translatable="false">Open Navigation Drawer</string>
+    <string name="close_nav" translatable="false">Close Navigation Drawer</string>
 </resources>

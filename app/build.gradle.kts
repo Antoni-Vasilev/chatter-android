@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    alias(libs.plugins.google.gms.google.services)
 }
 
 android {
@@ -11,8 +12,8 @@ android {
         applicationId = "eu.nexanet.chatter_android"
         minSdk = 26
         targetSdk = 34
-        versionCode = 4
-        versionName = "2024.05.20+1"
+        versionCode = 5
+        versionName = "2024.05.21+1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -48,4 +49,6 @@ dependencies {
 
     implementation(libs.retrofit)
     implementation(libs.converter.gson)
+
+    implementation(libs.firebase.messaging)
 }
