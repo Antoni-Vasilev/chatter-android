@@ -12,8 +12,8 @@ android {
         applicationId = "eu.nexanet.chatter_android"
         minSdk = 26
         targetSdk = 34
-        versionCode = 5
-        versionName = "2024.05.21+1"
+        versionCode = 6
+        versionName = "2024.05.23+1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
