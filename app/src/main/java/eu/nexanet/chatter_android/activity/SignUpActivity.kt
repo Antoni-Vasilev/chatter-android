@@ -13,20 +13,20 @@ import com.google.gson.Gson
 import eu.nexanet.chatter_android.R
 import eu.nexanet.chatter_android.model.MessageResponse
 import eu.nexanet.chatter_android.model.UserRegisterRequest
-import eu.nexanet.chatter_android.readField
+import eu.nexanet.chatter_android.extensions.readField
 import eu.nexanet.chatter_android.retrofit.RetrofitService
-import eu.nexanet.chatter_android.toSHA256
+import eu.nexanet.chatter_android.extensions.toSHA256
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class SignUpActivity : AppCompatActivity() {
 
-    lateinit var btnBack: LinearLayout
-    lateinit var fieldFullName: TextInputLayout
-    lateinit var fieldEmail: TextInputLayout
-    lateinit var fieldPassword: TextInputLayout
-    lateinit var btnSignUp: Button
+    private lateinit var btnBack: LinearLayout
+    private lateinit var fieldFullName: TextInputLayout
+    private lateinit var fieldEmail: TextInputLayout
+    private lateinit var fieldPassword: TextInputLayout
+    private lateinit var btnSignUp: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

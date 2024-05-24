@@ -1,4 +1,4 @@
-package eu.nexanet.chatter_android
+package eu.nexanet.chatter_android.extensions
 
 import com.google.android.material.textfield.TextInputLayout
 import java.security.MessageDigest

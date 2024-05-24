@@ -19,22 +19,23 @@ import eu.nexanet.chatter_android.extensions.LocalDatabasePath
 import eu.nexanet.chatter_android.extensions.LocalDatabaseValuePath
 import eu.nexanet.chatter_android.model.MessageResponse
 import eu.nexanet.chatter_android.model.UserLoginRequest
-import eu.nexanet.chatter_android.readField
+import eu.nexanet.chatter_android.extensions.readField
 import eu.nexanet.chatter_android.retrofit.RetrofitService
-import eu.nexanet.chatter_android.toSHA256
+import eu.nexanet.chatter_android.extensions.toSHA256
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import java.util.Date
 
+@Suppress("DEPRECATION")
 class LoginActivity : AppCompatActivity() {
 
-    lateinit var fieldEmail: TextInputLayout
-    lateinit var fieldPassword: TextInputLayout
-    lateinit var btnForgotPassword: TextView
-    lateinit var btnSignIn: Button
-    lateinit var btnSignUp: TextView
-    lateinit var appInfo: TextView
+    private lateinit var fieldEmail: TextInputLayout
+    private lateinit var fieldPassword: TextInputLayout
+    private lateinit var btnForgotPassword: TextView
+    private lateinit var btnSignIn: Button
+    private lateinit var btnSignUp: TextView
+    private lateinit var appInfo: TextView
 
     private val deviceLocalDatabase: LocalDatabase =
         LocalDatabase(this, LocalDatabasePath.DEVICE_DATA)
